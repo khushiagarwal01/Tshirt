@@ -1,0 +1,551 @@
+/* Main Wrapper */
+.home-wrapper {
+  /* Uncomment if needed for layout control */
+  /* margin-top: 60px; */
+  padding-top: 60px;
+  background-color: black;
+  /* min-height: 100vh; */
+overflow-y:auto;
+
+height: 100vh;
+
+  /* overflow: visible; */
+}
+
+.text-box {
+  text-align: center;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.small-text {
+  margin-top: 20px;
+  font-size: 2.4rem;
+  color: rgb(245, 97, 97);
+  font-family: "Dancing Script";
+  font-weight: 600;
+  margin-bottom: 10px;
+  /* overflow-y:scroll; */
+}
+
+.main-text {
+  font-size: 5rem;
+  font-weight: 750;
+  color: white;
+  line-height: 1.1;
+}
+
+.red, .sp {
+  color: rgb(245, 97, 97);
+}
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .small-text {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 6px;
+  }
+
+  .main-text {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+
+  .text-box {
+    padding: 16px;
+  }
+}
+/* T-Shirt Banner */
+/* .tshirt-banner {
+  position: relative;
+  width: calc(100vw - 20px); /* full screen width minus 4px on both sides */
+ /* T-Shirt Banner */
+ .tshirt-banner {
+  position: relative;
+  width: 100%;
+  margin: 2px 0 0 0;
+}
+
+.tshirt-img {
+  width: 95%;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto; /* to center the image */
+}
+
+.shop-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 5.5%; /* align with the image’s left */
+  padding: 15px 25px;
+  font-size: 13px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1;
+  width: auto;         /* ensures it wraps text only */
+  min-width: unset;    /* prevents it from being wide */
+  max-width: 150px;    /* optional: restrict max width */
+  white-space: nowrap; /* prevents button from breaking into multiple lines */
+  transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: rgb(245, 97, 97);
+}
+
+/* ✅ Responsive Styling BG IMAGE */
+@media (max-width: 700px) {
+  .tshirt-img {
+    width: 95%;
+    height: 60vh; /* smaller height for mobile */
+    border-radius: 0; /* remove border radius if needed */
+  }
+
+  .shop-btn {
+    bottom: 20px;
+    left: 5%;
+    padding: 5px 10px;
+    font-size: 12px;
+    max-width: 120px;
+  }
+}
+/* Black Friday Section */
+.black-friday-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align content to center */
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px; /* Padding adjusted */
+  margin-top: 40px; /* Reduced margin-top to minimize gap */
+}
+
+.black-friday-text {
+  flex: 1 1 48%;
+  margin-top: 0;
+}
+
+.black-friday-text h2 {
+  font-size: 2rem;
+  color: rgb(245, 97, 97);
+  font-family: "Dancing Script";
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.black-friday-text p:first-of-type {
+  font-size: 4rem;
+  margin-top: 0;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.1;
+}
+
+.black-friday-text p:last-of-type {
+  font-size: 0.9rem;
+  margin-left: 45px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.black-friday-image {
+  flex: 1 1 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-friday-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.shop-now-btn {
+  padding: 15px 25px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  align-self: flex-start;
+  width: fit-content;
+  margin-left: 45px;
+}
+
+.shop-now-btn:hover {
+  background-color: rgb(245, 97, 97);
+}
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .black-friday-section {
+    flex-direction: row;
+    align-items: center; /* Ensure both elements are on the same level */
+    justify-content: center;
+    margin-top: 20px; /* Reduce margin-top further for small screens */
+  }
+
+  .black-friday-text, .black-friday-image {
+    flex: 1;
+    max-width: 100%;
+    text-align: center; /* Center align text for better look */
+  }
+
+  .black-friday-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .black-friday-text p:last-of-type {
+    margin-left: 0;
+  }
+
+  .shop-now-btn {
+    margin-left: 0; /* Align button properly on smaller screens */
+  }
+}
+
+/* Discount Announcement */
+.discount-announcement {
+  text-align: center;
+ 
+}
+
+.discount-subtitle {
+  font-size: 2rem;
+  color: rgb(245, 97, 97);
+  font-weight: 550;
+  font-family: "Dancing Script";
+}
+
+.discount-main-title {
+  font-size: 5rem;
+  color: white;
+  font-weight: 750;
+  margin-top: 0;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+/* T-Shirt Cards */
+.tshirt-card-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tshirt-card {
+  flex: 1 1 24%;
+  margin: 10px 5px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.tshirt-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.tshirt-name {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px 0 4px 0;
+}
+
+.tshirt-stars {
+  color: rgb(245, 97, 97);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.tshirt-price {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(245, 97, 97);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ff4c4c;
+}
+
+/* Headphone Banner (Tshirt1 background) */
+.headphone-banner {
+  background-image: url('../assets/Tshirt1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  margin: 100px 5px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.overlay-content {
+  background: rgba(10, 10, 10, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overlay-content h2 {
+  font-size: 2rem;
+  font-family: "Dancing Script";
+  font-weight: 700;
+  color: rgb(245, 97, 97);
+}
+
+.overlay-content .headline {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 0;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.overlay-content .caption {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+/* Tablets - 2 cards per row */
+@media (max-width: 992px) {
+  .tshirt-card {
+    flex: 1 1 48%;
+  }
+}
+
+/* Mobile - 1 card per row */
+@media (max-width: 600px) {
+  .tshirt-card {
+    flex: 1 1 100%;
+  }
+}
+/* Why Choose Us Section */
+.why-choose-section {
+  color: white;
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+.why-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: "Dancing Script";
+  color: #ff4c4c;
+}
+
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.why-card {
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 400px;
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.why-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+/* Shopping Line */
+.shopping-line {
+  font-size: 5rem;
+  margin-top: 30px;
+  font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background-image: url('../assets/Tshirt1.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0 4px;
+  padding: 60px 20px;
+  color: white;
+  position: relative;
+  text-align: center;
+  height: 80%;
+  margin-bottom: 5vh;
+}
+
+.testimonial-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.testimonial-heading {
+  font-size: 2rem;
+  font-family: "Dancing Script";
+  color: #ff4c4c;
+  margin-bottom: 0;
+}
+
+.testimonial-subheading {
+  margin-top: -2px;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  font-size: 5rem;
+}
+
+.testimonial-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.testimonial-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  /* overflow-wrap: break-word; */
+}
+
+.testimonial-box span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ff8080;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .main-text {
+    font-size: 3.5rem;
+  }
+
+  .small-text {
+    font-size: 2rem;
+  }
+
+  .tshirt-banner {
+    width: 90%;
+  }
+
+  .shop-btn {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+  }
+
+  .why-card {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .why-heading {
+    font-size: 1.5rem;
+  }
+
+  .shopping-line {
+    font-size: 2.5rem;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-text {
+    font-size: 2.8rem;
+  }
+
+  .small-text {
+    font-size: 1.8rem;
+  }
+
+  .tshirt-img {
+    max-height: 500px;
+  }
+
+  .shop-btn {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .testimonial-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .testimonial-box {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .testimonial-heading {
+    font-size: 1.6rem;
+  }
+
+  .testimonial-subheading {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-box p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,77 @@
+/* Shop.css */
+
+.shop-container {
+    padding: 2rem;
+    background-color: #111;  /* Keeps the black theme */
+    color: white;
+    min-height: 100vh;  /* Ensure full height screen */
+  }
+  
+  .shop-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: rgb(245, 97, 97);
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic column sizing */
+    gap: 2rem;
+  }
+  
+  .product-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .product-name {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .add-to-cart-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgb(245, 97, 97);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: rgb(230, 80, 80);
+  }
+  
+  /* Responsive adjustments if needed */
+  @media screen and (max-width: 600px) {
+    .shop-container {
+      padding: 1rem;
+    }
+    .products-grid {
+      gap: 1rem;
+    }
+  }
+  

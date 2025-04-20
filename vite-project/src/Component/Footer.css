@@ -1,0 +1,18 @@
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: aliceblue;
+   
+    z-index: 1;
+  }
+  
+  .site-footer p {
+    margin-bottom: 0;
+  }
+  
+  .site-footer .powered-by {
+    font-weight: bold;
+    color: #ff4c4c; /* Or any other color */
+  }
+  

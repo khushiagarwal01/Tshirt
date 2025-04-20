@@ -1,0 +1,96 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black; /* Black Background */
+    color: #fff; /* White text for better contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Form Container Styling with Transparency */
+  .form-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background-color: rgba(29, 28, 28, 0.9); /* White background with slight transparency */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Box shadow for card effect */
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 28px;
+    color: rgb(245, 97, 97); /* Heading color */
+    margin-bottom: 20px;
+    font-family: "Dancing Script";
+  }
+  
+  /* Input fields styling */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: black;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: rgb(245, 97, 97);
+    background-color: #fff;
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(245, 97, 97); /* Requested Button Color */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(230, 80, 80); /* Darker shade on hover */
+  }
+  
+  /* Text and Links */
+  p {
+    font-size: 16px;
+  }
+  
+  p a {
+    color: rgb(245, 97, 97);
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form responsiveness */
+  @media screen and (max-width: 600px) {
+    .form-container {
+      padding: 30px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    input, button {
+      padding: 10px;
+    }
+  }
+  

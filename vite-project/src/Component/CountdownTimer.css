@@ -1,0 +1,106 @@
+.countdown-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .countdown-box {
+    display: flex;
+    gap: 30px;
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .countdown-box div {
+    text-align: center;
+    min-width: 200px;
+    min-height: 200px;
+    padding: 20px;
+    border: 2px solid #fff;
+    background: #121212;
+    transition: transform 0.3s ease;
+  }
+  
+  .countdown-box div:hover {
+    transform: scale(1.05);
+  }
+  
+  .countdown-box span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+  }
+  
+  .countdown-box p {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .countdown-end {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 768px) {
+    .countdown-box {
+      flex-direction: column; /* Stack boxes vertically on medium-sized screens */
+      padding: 20px 10px; /* Adjust padding */
+    }
+  
+    .countdown-box div {
+      min-width: 150px; /* Reduce the width for smaller screens */
+      min-height: 150px; /* Reduce the height */
+      padding: 15px; /* Adjust padding */
+    }
+  
+    .countdown-box span {
+      font-size: 2.5rem; /* Adjust font size */
+    }
+  
+    .countdown-box p {
+      font-size: 1.8rem; /* Adjust font size */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .countdown-container {
+      padding: 20px 0; /* Adjust container padding for small screens */
+    }
+  
+    .countdown-box {
+      gap: 20px; /* Reduce gap between boxes */
+    }
+  
+    .countdown-box div {
+      min-width: 120px; /* Further reduce width for very small screens */
+      min-height: 120px; /* Reduce height */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    .countdown-box span {
+      font-size: 2rem; /* Adjust font size */
+    }
+  
+    .countdown-box p {
+      font-size: 1.6rem; /* Adjust font size */
+    }
+  
+    .countdown-end {
+      font-size: 1.8rem; /* Adjust font size for small screens */
+    }
+  }
+  
