@@ -5,29 +5,31 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/products")
-      .then(res => {
+    const fetchProducts = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/api/products");
         setProducts(res.data);
-        console.log("Products from API:", products);
- // ya res.data.products if wrapped inside {products: [...]}
-      })
-      .catch(err => {
-        console.error("Error fetching products:", err);
-      });
+      } catch (err) {
+        console.log("Error fetching products:", err);
+      }
+    };
+    fetchProducts();
   }, []);
 
   return (
-    <div style={{ color: "white", padding: "2rem" }}>
-      <h2>Shop</h2>
-      <div className="product-grid">
-        {products.map(product => (
-          <div key={product._id} className="product-card">
-            <img src={product.imageUrl} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>₹{product.price}</p>
-          </div>
-        ))}
-      </div>
+    <div className="products-list">
+      {products.map((product) => (
+        <div key={product._id} className="product-card">
+          <img
+            src={`http://localhost:5000/uploads/${product.image}`} // Ensure this path is correct
+            alt={product.name}
+            className="product-image"
+          />
+          <h3>{product.name}</h3>
+          <p>{product.description}</p>
+          <p>{product.price}</p>
+        </div>
+      ))}
     </div>
   );
 };

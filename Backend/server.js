@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const adminRoutes = require('./routes/admin');
-
+const productRoutes=require('./routes/products')
 dotenv.config();
 const authMiddleware = require('./middlewares/authMiddleware');
 
@@ -31,7 +31,6 @@ const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
 
 
-const productRoutes = require('./routes/products');
 app.use('/api/products', productRoutes);
 
 app.use('/api/admin', adminRoutes);

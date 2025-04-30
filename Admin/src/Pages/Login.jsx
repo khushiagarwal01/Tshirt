@@ -24,9 +24,11 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center text-white">
       <div className="w-full max-w-md bg-[rgba(29,28,28,0.9)] p-10 rounded-xl shadow-xl mt-10 text-center">
-        <h2 className="text-[28px] text-[#f56161] font-[Dancing Script] mb-5">
-          Admin Login
-        </h2>
+      <h2 style={{ fontFamily: "Dancing Script" }} className="text-3xl mb-4 text-red-500">
+  Admin Login
+</h2>
+
+
         {error && (
           <p className="text-red-500 text-sm mb-2 font-semibold">{error}</p>
         )}
