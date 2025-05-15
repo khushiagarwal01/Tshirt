@@ -1,38 +1,56 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './Login.css'
+import { useCart } from "../CartContext"; // 👈 Import cart context
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
   const navigate = useNavigate();
+  const { syncCartToBackend } = useCart(); // 👈 Access cart sync
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
-        email,
-        password,
-      });
-      setMsg("Login successful!");
+const handleLogin = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await axios.post("http://localhost:5000/api/auth/login", {
+      
+      email,
+      password,
+    });
 
-      // Check if the user is admin
-      const role = res.data.role; // Assuming backend sends role (admin or user)
+    // Log response to check the userId
+    console.log("Login Response:", res.data);
 
-      if (role === 'admin') {
-        // Redirect to admin panel if admin
-        navigate("/api/admin");
-      } else {
-        // Redirect to shop if user
-        navigate("/shop");
-      }
+    // Ensure userId is present in the response
+    if (res.data.userId) {
+      // Save userId to localStorage
+      localStorage.setItem("user", JSON.stringify(res.data));
 
-    } catch (err) {
-      setMsg(err.response.data.message || "Login failed");
+      console.log("Saved userId to localStorage:", res.data.userId);
+    } else {
+      console.log("UserId is missing in response");
     }
-  };
+
+    setMsg("Login successful!");
+
+    const role = res.data.role;
+
+    // Sync cart to backend (using the userId)
+    await syncCartToBackend(res.data.userId);
+
+    // Navigate based on role
+    if (role === "admin") {
+      navigate("/api/admin");
+    } else {
+      navigate("/shop");
+    }
+  } catch (err) {
+    setMsg(err.response.data.message || "Login failed");
+  }
+};
+
 
   return (
     <div className="form-container">

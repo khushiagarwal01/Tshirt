@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import './Navbar.css';
 import { FaShoppingCart } from "react-icons/fa";
-
+import { useCart } from "../CartContext"
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { cartItems } = useCart();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -24,6 +24,7 @@ const Navbar = () => {
         <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
         <NavLink to="/shop" className={({ isActive }) => isActive ? 'active' : ''}>Shop</NavLink>
+      
       </div>
 
       <div className="nav-right">

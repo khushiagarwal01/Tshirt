@@ -1,0 +1,128 @@
+.cart-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: black;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.cart-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 👈 aligns left + right cleanly */
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.cart-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.cart-info {
+  display: flex;
+  
+
+ 
+ 
+  font-size: 14px;
+  font-weight: bold;
+   color: rgb(245, 97, 97);
+ 
+  min-width: 100px;
+ 
+ 
+}
+
+.cart-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: black;
+}
+
+.cart-info p {
+
+  font-size: 14px;
+  font-weight: bold;
+ color: rgb(245, 97, 97);
+}
+
+.cart-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.item-total {
+  font-weight: bold;
+  color: rgb(245, 97, 97);
+  white-space: nowrap;
+
+}
+
+.remove-btn {
+  Background-color: rgb(245, 97, 97);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.remove-btn:hover {
+ background-color: rgb(244, 25, 25);
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+   color: rgb(245, 97, 97);
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  margin-top: 20px;
+  padding: 10px 10px ;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Dancing Script";
+  background-color: rgb(245, 97, 97);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: rgb(244, 25, 25);
+}

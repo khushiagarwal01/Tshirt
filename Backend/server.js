@@ -4,7 +4,9 @@ const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const adminRoutes = require('./routes/admin');
-const productRoutes=require('./routes/products')
+const productRoutes=require('./routes/products');
+const cartRoutes = require('./routes/cartRoutes'); 
+
 dotenv.config();
 const authMiddleware = require('./middlewares/authMiddleware');
 
@@ -34,6 +36,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 
 app.use('/api/admin', adminRoutes);
+app.use('/api/cart', cartRoutes); 
+
 
 // Admin panel route (Protected)
 app.get('/admin/panel', authMiddleware, (req, res) => {

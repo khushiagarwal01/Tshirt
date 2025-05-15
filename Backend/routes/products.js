@@ -42,16 +42,30 @@ router.get("/", async (req, res) => {
   res.send(products);
 });
 
-// Update product
-router.put("/:id", async (req, res) => {
-  await Product.findByIdAndUpdate(req.params.id, req.body);
-  res.send({ success: true });
-});
 
-// Delete product
-router.delete("/:id", async (req, res) => {
-  await Product.findByIdAndDelete(req.params.id);
-  res.send({ success: true });
+
+// NEW: Delete by ID
+router.delete("/deleteById/:id", async (req, res) => {
+  try {
+    const deletedProduct = await Product.findByIdAndDelete(req.params.id);
+    if (!deletedProduct) {
+      return res.status(404).send({ success: false, message: "Product not found" });
+    }
+    res.send({ success: true, message: "Product deleted successfully" });
+  } catch (err) {
+    res.status(500).send({ success: false, message: "Error deleting product" });
+  }
+});
+router.put("/:id", async (req, res) => {
+  try {
+    const updated = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!updated) {
+      return res.status(404).send({ success: false, message: "Product not found" });
+    }
+    res.send({ success: true, product: updated });
+  } catch (err) {
+    res.status(500).send({ success: false, message: "Error updating product" });
+  }
 });
 
 module.exports = router;

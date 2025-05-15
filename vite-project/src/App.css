@@ -1,16 +1,22 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=National+Park:wght@200..800&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=National+Park:wght@200..800&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212 Dark charcoal;
    color: #f0f0f0;
   overflow-x: hidden;
+  overflow: auto;
   /* overflow-y: auto; */
   /* overflow-y: auto; */
   overflow-y: auto;
-  height: auto;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }  

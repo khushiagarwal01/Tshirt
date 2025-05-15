@@ -8,15 +8,16 @@ import Contact from "./Pages/Contact";
 import Shop from "./Pages/Shop";
 import Footer from './Component/Footer';
 import Referral from './Component/Referral';
-import { useState } from 'react';
+// import {  useState } from "react";
 import Register from './Pages/Register';
 import Login from './Pages/Login';
+import Cart from './Pages/Cart';
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);  // Track login status
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);  // Track login status
 
-  const loginHandler = () => setIsAuthenticated(true);
-  const logoutHandler = () => setIsAuthenticated(false);
+  // const loginHandler = () => setIsAuthenticated(true);
+  // const logoutHandler = () => setIsAuthenticated(false);
   return (
     <>
     <Router>
@@ -29,6 +30,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login"element={<Login />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </Router>
